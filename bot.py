@@ -3,6 +3,7 @@
 import discord
 import responses
 import logging
+import sensitive
 
 LOGGER = logging.getLogger(__name__)
 
@@ -23,7 +24,6 @@ async def send_message(message, user_message, isPrivate):
 
 def run_discord_bot():
     """Bot running function"""
-    TOKEN = "MTA0NzkxMjcyNTYyMTI2NDQ0NA.GxLIXw.tqpcibJUP0fZ0IcvjXA-tbml4L8zq-c3kreiaU"
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -49,4 +49,4 @@ def run_discord_bot():
         else:
             await send_message(message, user_message, isPrivate=False)
 
-    client.run(TOKEN)
+    client.run(sensitive.TOKEN)
