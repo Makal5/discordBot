@@ -1,6 +1,4 @@
 sensitive.py
-log/debug.log
-log/errors.log
-log/info.log
+log/*
 __pycache__/
 .idea/
