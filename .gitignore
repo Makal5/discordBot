@@ -2,3 +2,5 @@ sensitive.py
 log/debug.log
 log/errors.log
 log/info.log
+__pycache__/
+.idea/
