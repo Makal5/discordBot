@@ -29,6 +29,6 @@ def get_response(message: str) -> str:
         return 'I didn\'t get that try writing "!help"'
 
     if message.find("<@1047912725621264444>") >= 0:
-        return "Whats's up??"
+        return "What's up?"
 
     return None
