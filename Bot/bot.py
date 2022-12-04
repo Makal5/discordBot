@@ -1,7 +1,7 @@
 """Bot python file"""
 
 import discord
-import responses
+from Responses import responses
 import logging
 import sensitive
 
