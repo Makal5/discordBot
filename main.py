@@ -10,7 +10,7 @@ import os
 if not os.path.exists("./log"):
     os.mkdir("./log")
 logger = logging.getLogger(__name__)
-log_config_file = 'logging/logging.json'
+log_config_file = 'logging.json'
 try:
     with open(log_config_file, 'rt') as f:
         config = json.load(f)

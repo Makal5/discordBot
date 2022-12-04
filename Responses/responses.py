@@ -6,7 +6,7 @@ import logging
 LOGGER = logging.getLogger(__name__)
 
 
-def get_response(message: str) -> str:
+def get_response(message: str) -> str: # TODO add some functionality to bot responses
     """Get response on user sent message"""
     if message.startswith('!'):
 
@@ -17,14 +17,12 @@ def get_response(message: str) -> str:
 
         if p_message == 'roll':
             return str(random.randint(1, 6))
-                            #!<@1047912725621264444>
+            # !<@1047912725621264444>
         if p_message == '<@1047912725621264444>':
             return 'Yes, how can i help you?'
 
         if p_message == 'help':
             return '`These are all the available: `\n`roll`\n`hello`\n`@MieraSargs`'
-
-
 
         return 'I didn\'t get that try writing "!help"'
 

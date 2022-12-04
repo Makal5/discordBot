@@ -37,6 +37,11 @@ def run_discord_bot():
         if message.author == client.user:
             return
 
+        if message.content != "ass" or message.content != "fuck":
+            pass
+        else:
+            message.channel.purge(limit=1)
+
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
