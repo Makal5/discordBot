@@ -1,9 +1,12 @@
 """Bot python file"""
 
-import discord
-from Responses import responses
 import logging
+
+import discord
+from discord.ext import commands, tasks
+
 import sensitive
+from Responses import responses
 
 LOGGER = logging.getLogger(__name__)
 
@@ -34,6 +37,8 @@ def run_discord_bot():
         """On ready log to info"""
         LOGGER.info(f'{client.user} is up and running')
 
+
+
     @client.event
     async def on_message(message):
         """Message working"""
@@ -60,5 +65,7 @@ def run_discord_bot():
             await send_message(message, user_message, isPrivate=True)
         else:
             await send_message(message, user_message, isPrivate=False)
+
+
 
     client.run(sensitive.TOKEN)
