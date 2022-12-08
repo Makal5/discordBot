@@ -29,4 +29,7 @@ def get_response(message: str) -> str: # TODO add some functionality to bot resp
     if message.find("<@1047912725621264444>") >= 0:
         return "What's up?"
 
+    if message.startswith('ping'):
+        return 'Pong!'
+
     return None
