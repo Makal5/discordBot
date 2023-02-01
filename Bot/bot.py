@@ -37,8 +37,6 @@ def run_discord_bot():
         """On ready log to info"""
         LOGGER.info(f'{client.user} is up and running')
 
-
-
     @client.event
     async def on_message(message):
         """Message working"""
@@ -47,7 +45,7 @@ def run_discord_bot():
             return
 
         # Check if message does not contain bad words
-        if message.content != "ass" or message.content != "fuck":
+        if message.content.contains != "ass" or message.content.contains != "fuck":
             pass
         else:
             message.channel.purge(limit=1)
@@ -65,7 +63,5 @@ def run_discord_bot():
             await send_message(message, user_message, isPrivate=True)
         else:
             await send_message(message, user_message, isPrivate=False)
-
-
 
     client.run(sensitive.TOKEN)
